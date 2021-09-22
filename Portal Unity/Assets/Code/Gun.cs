@@ -21,7 +21,7 @@ public class Gun : MonoBehaviour
         RaycastHit raycastHit;
 
         //if the raycast hit an object...
-        if (Physics.Raycast(FiringPoint.position, transform.TransformDirection(Vector3.forward), out raycastHit, Mathf.Infinity))
+        if (Physics.Raycast(FiringPoint.position, transform.TransformDirection(Vector3.forward), out raycastHit, Mathf.Infinity) && raycastHit.collider.gameObject.tag != "NoPortal")
         {
             if (isBlue)
             {
