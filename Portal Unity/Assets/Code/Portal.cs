@@ -10,7 +10,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isActive)
+        if (isActive && !other.gameObject.GetComponent<ObjectGrabber>())
         {
             linkedPortal.isActive = false;
             TeleportObject(other.transform);

@@ -10,6 +10,11 @@ public class Gun : MonoBehaviour
     public AudioSource ShootSound;
     public AudioSource ErrorSound;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     // Update is called once per frame
     void Update()
     {
