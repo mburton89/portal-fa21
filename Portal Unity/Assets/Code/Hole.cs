@@ -6,8 +6,10 @@ public class Hole : MonoBehaviour
 {
 
     public GameObject goop;
-    bool sealant;
-        
+    bool sealant = true;
+    public Rigidbody Prefab;
+    public Transform Spawnpoint;
+    public Rigidbody RigidPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,10 @@ public class Hole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (RigidPrefab != null)
+        {
+            sealant = false;
+        }
     }
 
     public void Iftouched()
@@ -41,7 +46,8 @@ public class Hole : MonoBehaviour
         }
         if (sealant == true)
         {
-
+         
+            RigidPrefab = Instantiate(Prefab, Spawnpoint.position, Spawnpoint.rotation) as Rigidbody;
         }
 
     }
