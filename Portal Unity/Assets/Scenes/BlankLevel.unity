@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9923,6 +9923,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 177110596, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   m_PrefabInstance: {fileID: 2054873077}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854592768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854592766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b40afb7da12a64f9e51b96f6dbb161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchKey: 122
+  bitchasswhore: 120
+  firePoint: {fileID: 1190253937}
+  testPrefab: {fileID: 1092487353}
+  button: 1
+  bitch: {x: 0, y: 0, z: 0}
+  scaleRate: 0.001
 --- !u!114 &1854592772
 MonoBehaviour:
   m_ObjectHideFlags: 0
