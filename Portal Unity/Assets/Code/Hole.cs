@@ -4,54 +4,15 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-
-    public GameObject goop;
-    bool sealant = true;
-    public Rigidbody Prefab;
-    public Transform Spawnpoint;
-    public Rigidbody RigidPrefab;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject sealedHole;
+  
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (RigidPrefab != null)
+        if (other.CompareTag("GOOP"))
         {
-            sealant = false;
+            sealedHole.SetActive(true);
+            Destroy(other.gameObject);
         }
     }
-
-    public void Iftouched()
-    {
-        if (true)
-        {
-
-        }
-
-
-
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.GetComponent<GameObject>())
-        {
-            sealant = true;
-        }
-        if (sealant == true)
-        {
-         
-            RigidPrefab = Instantiate(Prefab, Spawnpoint.position, Spawnpoint.rotation) as Rigidbody;
-        }
-
-    }
-
-
 }
 
